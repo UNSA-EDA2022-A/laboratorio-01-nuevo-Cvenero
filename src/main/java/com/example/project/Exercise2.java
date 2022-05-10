@@ -22,7 +22,20 @@ public class Exercise2 {
 
 	public Integer getMenorNumeroSaltos(int a []) {
 
-		// TO DO
-		return -1;
+		int salto = 50;
+		int cont = 1;
+		for (int i = 0; i < 7; i++) {
+			if (salto <= a[i]) {
+				if (salto == a[6]) {
+					break;
+				}
+				salto = 50;
+				salto += a[i - 1];
+				i--;
+				cont++;
+			}
+
+		}
+		return cont;
 	}
 }
